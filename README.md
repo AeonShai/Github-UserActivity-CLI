@@ -1,8 +1,7 @@
 # GitHub Activity CLI
 
-A simple command-line tool written in Python to fetch and display the recent public activity of any GitHub user using the GitHub REST API. Based on: https://roadmap.sh/projects/github-user-activity
-
----
+A simple command-line tool written in Python to fetch and display the recent public activity of any GitHub user using the GitHub REST API.  
+Inspired by: [roadmap.sh GitHub User Activity Project](https://roadmap.sh/projects/github-user-activity)
 
 ## 🔧 Features
 
@@ -17,46 +16,56 @@ A simple command-line tool written in Python to fetch and display the recent pub
 - Handles errors (invalid user, connection issues, API rate limits)
 - No external libraries required
 
----
-
 ## ⚙️ Requirements
 
-- **Python 3.10 or newer** (for `match-case` support)
-
----
+- **Python 3.10 or newer** (for `match-case` syntax support)
 
 ## 🚀 Installation
 
-1. Clone this repository:
+Clone this repository:
 
 ```bash
-git clone https://github.com/AeonShai/Github-UserActivity-CLI
+git clone https://github.com/AeonShai/Github-UserActivity-CLI.git
 cd github-activity-cli
+```
 
-    (Optional) Make it executable:
+(Optional) Make it executable:
 
+```bash
 chmod +x github_activity.py
+```
 
-    (Optional) Add an alias for easier CLI access:
+(Optional) Add an alias for easier CLI access:
 
+```bash
 alias github-activity="python /full/path/to/github_activity.py"
+```
 
-🖥️ Usage
+Replace `/full/path/to/` with the absolute path to the script on your system.
 
-Run it via Python:
+## 🖥️ Usage
 
+Run the script using Python:
+
+```bash
 python github_activity.py <github-username>
+```
 
-Or via alias:
+Or use the alias (if configured):
 
+```bash
 github-activity <github-username>
+```
 
-Example:
+### Example
 
+```bash
 github-activity torvalds
+```
 
-📌 Output Example
+## 📌 Output Example
 
+```text
 Username: torvalds
 torvalds's last 30 activity pulled.
 
@@ -67,11 +76,10 @@ torvalds's last 30 activity pulled.
 • Starred the repository → torvalds/git
 • Pull request closed in → torvalds/linux
 • Branch created in → torvalds/linux
+```
 
-⚠️ Notes
+## ⚠️ Notes
 
-    The GitHub API allows 60 unauthenticated requests per hour.
-
-    Works only for public activity.
-
-    Does not require any authentication or token.
+- The GitHub API allows **60 unauthenticated requests per hour**
+- This tool only works for **public activity**
+- **No authentication or token** is required
